@@ -3,6 +3,13 @@
   <head>
     <script src="../p5.min.js"></script>
     <script src="sketch.js"></script>
+    <style>
+      #canvas-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <audio id="game-over-sound" class="sound">
@@ -14,5 +21,6 @@
     <audio id="bounce-sound" class="sound">
       <source src="Audio/space_bounce.wav" />
     </audio>
+    <div id="canvas-container"></div>
   </body>
 </html>

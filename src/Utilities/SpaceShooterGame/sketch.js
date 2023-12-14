@@ -58,7 +58,7 @@ function setup() {
   //if you change the size
   //don't forget to upadete the
   //starting positons of the paddle and the ball
-  createCanvas(500, 550);
+  createCanvas(500, 550).parent("canvas-container");
 
   scoreBoard = createGraphics(250, 250);
   playAgainButton = createButton("Play Again").hide(); //don't display the button yet

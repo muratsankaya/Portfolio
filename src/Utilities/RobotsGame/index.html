@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <!-- custom CSS -->
+    <style type="text/css">
+      #playAgainBtn {
+        position: absolute;
+        top: 380px;
+        left: 350px;
+      }
+
+      #playAgainBtn:hover {
+        color: white;
+      }
+      #canvas-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="achievement-sound" class="sound">
+      <source src="Audio/achievement.wav" />
+    </audio>
+    <div id="canvas-container"></div>
+  </body>
+</html>

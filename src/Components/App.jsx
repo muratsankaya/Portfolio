@@ -4,12 +4,21 @@ import background from "../Utilities/background";
 import CanvasDisplay from "./CanvasDisplay";
 
 const App = () => {
+  const interactiveProjects = [
+    "SpaceShooterGame",
+    "RobotsGame",
+    "TopDownShooterGame",
+  ];
   return (
     <div className="App">
       <div className="background">
         <P5Wrapper sketch={background} />
       </div>
-      <CanvasDisplay content={"SpaceShooter"} />
+      <div className="interactive-projects">
+        {interactiveProjects.map((project) => (
+          <CanvasDisplay key={project} content={project} />
+        ))}
+      </div>
     </div>
   );
 };
