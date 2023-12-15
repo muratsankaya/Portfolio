@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- A-Frame core library -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+    <!-- p5 Core -->
+    <script src="../p5.min.js"></script>
+
+    <!-- Dr.Kap's Afarme + p5 lib -->
+    <script src="https://craignyu.github.io/aframep5/libraries/aframep5-v2.1.js"></script>
+
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <!-- container to hold our VR scene -->
+    <a-scene id="VRScene">
+      <!-- container to hold our assets -->
+      <a-assets id="VRAssets">
+        <a-asset id="robot_obj" src="Images/robot/model.obj"></a-asset>
+        <a-asset id="robot_mtl" src="Images/robot/materials.mtl"></a-asset>
+        <a-asset
+          id="fighterjet_obj"
+          src="Images/future_fighterjet/fighterjet.obj"
+        ></a-asset>
+        <a-asset
+          id="fighterjet_mtl"
+          src="Images/future_fighterjet/fighterjet.mtl"
+        ></a-asset>
+      </a-assets>
+    </a-scene>
+    <audio id="soundtrack" class="sound" controls loop>
+      <source src="Audio/soundtrack.mp3" />
+    </audio>
+  </body>
+</html>

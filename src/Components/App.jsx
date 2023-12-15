@@ -7,10 +7,12 @@ const App = () => {
   const interactiveProjects = [
     "SpaceShooterGame",
     "RobotsGame",
+    "VRExperience",
     "TopDownShooterGame",
   ];
+  //const interactiveProjects = ["TopDownShooterGame"];
   return (
-    <div className="App">
+    <div className="app">
       <div className="background">
         <P5Wrapper sketch={background} />
       </div>

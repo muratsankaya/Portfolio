@@ -4,16 +4,34 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
-.App {
+.app {
   text-align: center;
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
 }
 
-.background {
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.app .background {
   position: absolute;
   top: 0;
   left: 0;

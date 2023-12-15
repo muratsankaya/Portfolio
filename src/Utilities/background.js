@@ -34,7 +34,7 @@ const background = (p, parentDimensions) => {
 
   p.setup = () => {
     p.createCanvas(parentDimensions.width, parentDimensions.height);
-    for (let i = 0; i < 60; ++i) {
+    for (let i = 0; i < 80; ++i) {
       let xSpeed = p.random(-1.6, 1.6);
       let ySpeed = p.random(-1.6, 1.6);
       circles.push(
