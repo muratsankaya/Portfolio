@@ -5,9 +5,15 @@
     <script src="sketch.js"></script>
     <style>
       #canvas-container {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      #ply-agn-btn{
+        position:absolute;
+        bottom: 200px;
+        display: none;
       }
     </style>
   </head>
@@ -21,6 +27,8 @@
     <audio id="bounce-sound" class="sound">
       <source src="Audio/space_bounce.wav" />
     </audio>
-    <div id="canvas-container"></div>
+    <div id="canvas-container">
+      <button id="ply-agn-btn" onclick="window.location.reload()">Play Again</button>
+    </div>
   </body>
 </html>

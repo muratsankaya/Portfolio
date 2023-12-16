@@ -33,10 +33,11 @@ const background = (p, parentDimensions) => {
   let circles = [];
 
   p.setup = () => {
+    p.frameRate(30);
     p.createCanvas(parentDimensions.width, parentDimensions.height);
     for (let i = 0; i < 80; ++i) {
-      let xSpeed = p.random(-1.6, 1.6);
-      let ySpeed = p.random(-1.6, 1.6);
+      let xSpeed = p.random(-2.5, 2.5);
+      let ySpeed = p.random(-2.5, 2.5);
       circles.push(
         new Circle(
           p.random(p.width),

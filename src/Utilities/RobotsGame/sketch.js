@@ -10,7 +10,7 @@ let doorX, doorY, leftGate, rightGate;
 let score = 0;
 
 let robotCount = 0,
-  totalRobots = 15;
+  totalRobots = 1;
 
 class Robot {
   constructor(x, y) {
@@ -348,10 +348,6 @@ function stopLoop() {
   noLoop();
 }
 
-function playAgain() {
-  window.location.reload();
-}
-
 function preload() {
   //Images
   arrow_right = loadImage("Images/Arrows/arrow_right.png");
@@ -455,8 +451,8 @@ function draw() {
 
   noStroke();
   fill(255);
-  textSize(12);
-  text("Score: " + score, 740, 30);
+  textSize(14);
+  text("Score: " + score, 720, 30);
 
   if (robots.length == 0 && robotCount >= totalRobots) {
     stopLoop();
@@ -465,11 +461,7 @@ function draw() {
     fill(0, 255, 0);
     textSize(50);
     text("You Scored: ", 270, 280);
-    text(str(round((score * 100) / totalRobots, 3)) + "%", 330, 340);
-    let playAgainButton = createButton("Play Again");
-    playAgainButton.id("playAgainBtn");
-    playAgainButton.mousePressed(playAgain);
-    playAgainButton.style("background-color", color(0, 255, 0));
-    playAgainButton.size(120, AUTO);
+    text(str(round((score * 100) / totalRobots, 3)) + "%", 330, 350);
+    select("#ply-agn-btn").show();
   }
 }

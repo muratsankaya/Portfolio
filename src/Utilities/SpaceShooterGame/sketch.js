@@ -49,10 +49,6 @@ function preload() {
   spaceBounceS = document.getElementById("bounce-sound");
 }
 
-function playAgain() {
-  window.location.reload();
-}
-
 function setup() {
   //set the background size of our canvas
   //if you change the size
@@ -61,9 +57,6 @@ function setup() {
   createCanvas(500, 550).parent("canvas-container");
 
   scoreBoard = createGraphics(250, 250);
-  playAgainButton = createButton("Play Again").hide(); //don't display the button yet
-  playAgainButton.position(220, 320);
-  playAgainButton.mousePressed(playAgain);
 
   background(0);
 
@@ -90,6 +83,8 @@ function setup() {
   imageMode(CENTER);
 
   text("Bounces: " + bounceCount + " UFO's: " + ufoCount, 15, 15);
+
+  noLoop();
 }
 
 function draw() {
@@ -237,7 +232,8 @@ function draw() {
     scoreBoard.text("CONGRATULATIONS !!!", 15, 80);
     scoreBoard.text("YOU CATCHED '" + ufoCount + "' UFO'S", 1, 110);
     image(scoreBoard, 250, 250);
-    playAgainButton.show();
+    select("#ply-agn-btn").show();
+    noLoop();
   }
 }
 
@@ -267,4 +263,6 @@ function mousePressed() {
       ySpeed = -3;
     }
   }
+  if(!isLooping() && !gameOver)
+    loop();
 }

@@ -7,7 +7,6 @@ const App = () => {
   const interactiveProjects = [
     "SpaceShooterGame",
     "RobotsGame",
-    "VRExperience",
     "TopDownShooterGame",
   ];
   //const interactiveProjects = ["TopDownShooterGame"];
