@@ -4,12 +4,12 @@ import background from "../Utilities/background";
 import CanvasDisplay from "./CanvasDisplay";
 
 const App = () => {
-  const interactiveProjects = [
-    "SpaceShooterGame",
-    "RobotsGame",
-    "TopDownShooterGame",
-  ];
-  //const interactiveProjects = ["TopDownShooterGame"];
+  // const interactiveProjects = [
+  //   "SpaceShooterGame",
+  //   "RobotsGame",
+  //   "TopDownShooterGame",
+  // ];
+  const interactiveProjects = ["TopDownShooterGame","RobotsGame"];
   return (
     <div className="app">
       <div className="background">
