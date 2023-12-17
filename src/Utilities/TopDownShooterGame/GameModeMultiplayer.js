@@ -1071,8 +1071,6 @@ function preload() {
       loadImage("Images/Handgun/reload/shooter_reload_handgun_" + i + ".png")
     );
   }
-
-  noLoop();
 }
 
 function setup() {
@@ -1084,6 +1082,8 @@ function setup() {
   textAlign(CENTER, CENTER);
 
   GAME = new GameControllerM(GRAPHICS, SOUND);
+
+  noLoop();
 }
 
 function myPause() {
@@ -1098,7 +1098,7 @@ function resume() {
 }
 
 function startGame() {
-  var buttons = document.getElementsByClassName("control_btn");
+  var buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
     buttons[i].disabled = false;
   }
@@ -1111,7 +1111,7 @@ function stopDraw() {
 }
 
 function gameOver() {
-  var buttons = document.getElementsByClassName("control_btn");
+  var buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
     buttons[i].disabled = true;
   }

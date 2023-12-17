@@ -801,8 +801,6 @@ function preload() {
   for (let i = 0; i < 24; ++i) {
     SOUND.zombie.push("zombieSound" + i);
   }
-
-  noLoop();
 }
 
 function setup() {
@@ -828,11 +826,13 @@ function setup() {
   textAlign(CENTER, CENTER);
 
   GAME = new GameControllerZ(GRAPHICS, SOUND);
+
+  noLoop();
 }
 
 function myPause() {
   //p5 has a function called paused
-  GAME.state = 2; //
+  GAME.state = 2;
   noLoop();
 }
 
@@ -842,8 +842,8 @@ function resume() {
 }
 
 function startGame() {
-  document.getElementById("mmode-start-box").style.display = "none";
-  var buttons = document.getElementsByClassName("control_btn");
+  document.getElementById("zmode-start-box").style.display = "none";
+  var buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
     buttons[i].disabled = false;
   }
@@ -886,7 +886,7 @@ function stopDraw() {
 }
 
 function GameOver() {
-  var buttons = document.getElementsByClassName("control_btn");
+  var buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
     buttons[i].disabled = true;
   }
