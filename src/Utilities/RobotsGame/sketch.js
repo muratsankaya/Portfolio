@@ -10,7 +10,7 @@ let doorX, doorY, leftGate, rightGate;
 let score = 0;
 
 let robotCount = 0,
-  totalRobots = 1;
+  totalRobots = 15;
 
 class Robot {
   constructor(x, y) {
