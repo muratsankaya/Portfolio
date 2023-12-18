@@ -1,9 +1,9 @@
 import "./CanvasDisplay.css";
 
-const CanvasDisplay = ({ content }) => {
+const CanvasDisplay = ({ project }) => {
   return (
     <div className="canvas-display">
-      <iframe className="iframe" src={`/src/Utilities/${content}/index.html`} />
+      <iframe className="iframe" src={`/src/Utilities/${project}/index.html`} />
     </div>
   );
 };

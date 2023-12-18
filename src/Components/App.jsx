@@ -3,14 +3,14 @@ import P5Wrapper from "./P5Wrapper";
 import background from "../Utilities/background";
 import CanvasDisplay from "./CanvasDisplay";
 import Introduction from "./InteractiveProjects/Introduction";
+import Project from "./Project";
 
 const App = () => {
-  // const interactiveProjects = [
-  //   "SpaceShooterGame",
-  //   "RobotsGame",
-  //   "TopDownShooterGame",
-  // ];
-  const interactiveProjects = ["SpaceShooterGame"];
+  const interactiveProjects = [
+    "SpaceShooterGame",
+    "RobotsGame",
+    "TopDownShooterGame",
+  ];
   return (
     <div className="app">
       <div className="background">
@@ -19,7 +19,7 @@ const App = () => {
       <div className="interactive-projects">
         <Introduction />
         {interactiveProjects.map((project) => (
-          <CanvasDisplay key={project} content={project} />
+          <Project key={project} project={project} />
         ))}
       </div>
     </div>
