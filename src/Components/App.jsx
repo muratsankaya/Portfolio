@@ -10,6 +10,7 @@ const App = () => {
     "SpaceShooterGame",
     "RobotsGame",
     "TopDownShooterGame",
+    "VRExperience",
   ];
   return (
     <div className="app">

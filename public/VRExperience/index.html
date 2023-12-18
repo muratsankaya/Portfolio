@@ -13,6 +13,24 @@
     <script src="https://craignyu.github.io/aframep5/libraries/aframep5-v2.1.js"></script>
 
     <script src="sketch.js"></script>
+    <style>
+      #bck-btn {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        min-width: 120px;
+        min-height: 50px;
+        background-color: white;
+        font-size: large;
+        border-radius: 10px;
+        cursor: pointer;
+        white-space: nowrap;
+        font-weight: 900;
+      }
+      #bck-btn:hover {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <!-- container to hold our VR scene -->
@@ -34,5 +52,8 @@
     <audio id="soundtrack" class="sound" controls loop>
       <source src="Audio/soundtrack.mp3" />
     </audio>
+    <button id="bck-btn" onclick="window.location.href='/'">
+      <- Main Page
+    </button>
   </body>
 </html>
