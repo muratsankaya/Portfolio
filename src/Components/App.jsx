@@ -12,6 +12,7 @@ const App = () => {
     "TopDownShooterGame",
     "VRExperience",
   ];
+  //const interactiveProjects = ["TopDownShooterGame"];
   return (
     <div className="app">
       <div className="background">

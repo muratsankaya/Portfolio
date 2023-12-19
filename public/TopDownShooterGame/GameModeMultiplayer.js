@@ -1098,12 +1098,13 @@ function resume() {
 }
 
 function startGame() {
-  var buttons = document.getElementsByClassName("control-btn");
+  document.getElementById("mmode-start-box").style.display = "none";
+  const buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
-    buttons[i].disabled = false;
+    buttons[i].classList.toggle("hidden");
   }
-  loop();
   GAME.state = 1;
+  loop();
 }
 
 function stopDraw() {
@@ -1111,13 +1112,11 @@ function stopDraw() {
 }
 
 function gameOver() {
-  var buttons = document.getElementsByClassName("control-btn");
+  const buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
-    buttons[i].disabled = true;
+    buttons[i].classList.toggle("hidden");
   }
-  var playAgain = document.getElementById("ply_agn_btn");
-  playAgain.disabled = false;
-  playAgain.style.display = "inline";
+  document.getElementById("ply-agn-btn").classList.toggle("hidden");
 }
 
 function removeStartBox() {

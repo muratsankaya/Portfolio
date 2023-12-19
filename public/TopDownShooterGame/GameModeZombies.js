@@ -624,7 +624,7 @@ class GameControllerZ {
       this.deadZombies = 0; //reset dead zombies
       this.zCursor = 0; //reset the zombie cursor
 
-      //FOR NOW I WANT THE HEALTH RANGE TO BE CONSTANT
+      //FOR NOW I WANT THE HEALTH RANGE TO BE STATIC
 
       //Empower the zombies
       if (this.dif == 1) {
@@ -843,9 +843,9 @@ function resume() {
 
 function startGame() {
   document.getElementById("zmode-start-box").style.display = "none";
-  var buttons = document.getElementsByClassName("control-btn");
+  const buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
-    buttons[i].disabled = false;
+    buttons[i].classList.toggle("hidden");
   }
   GAME.state = 1;
   loop();
@@ -885,14 +885,12 @@ function stopDraw() {
   noLoop();
 }
 
-function GameOver() {
-  var buttons = document.getElementsByClassName("control-btn");
+function gameOver() {
+  const buttons = document.getElementsByClassName("control-btn");
   for (let i = 0; i < buttons.length; ++i) {
-    buttons[i].disabled = true;
+    buttons[i].classList.toggle("hidden");
   }
-  var playAgain = document.getElementById("ply_agn_btn");
-  playAgain.disabled = false;
-  playAgain.style.display = "inline";
+  document.getElementById("ply-agn-btn").classList.toggle("hidden");
 }
 
 function draw() {
@@ -914,6 +912,6 @@ function draw() {
     textSize(64);
     text("GAME OVER", 320, 320);
     stopDraw();
-    GameOver();
+    gameOver();
   }
 }

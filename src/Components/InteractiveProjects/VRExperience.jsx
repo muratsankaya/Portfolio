@@ -38,28 +38,26 @@ const VRExperience = () => {
       </div>
       <div>
         <h3> How to Interact </h3>
-        <p>
-          <ul>
-            <li>Drag the screen anywhere you want.</li>
+        <ul>
+          <li>Drag the screen anywhere you want.</li>
 
-            <li>Click on any planet. Screen will move towards that planet.</li>
-            <li>
-              There is a scene for you to draw on a texture. You can draw on the
-              texture by pressing `P` and moving your mouse over the texture.You
-              can change the color or clear the texture by clicking on the
-              spheres located below the texture.
-            </li>
-            <li>
-              You can press on `R` and get back to the drawing scene any time
-              you want.
-              <ul>
-                <li>You may need to drag the screen to center the texture</li>
-              </ul>
-            </li>
-          </ul>
-          <span style={{ color: "green" }}>
-            If you have access, try it with a virtual reality machine.
-          </span>
+          <li>Click on any planet. Screen will move towards that planet.</li>
+          <li>
+            There is a scene for you to draw on a texture. You can draw on the
+            texture by pressing `P` and moving your mouse over the texture.You
+            can change the color or clear the texture by clicking on the spheres
+            located below the texture.
+          </li>
+          <li>
+            You can press on `R` and get back to the drawing scene any time you
+            want.
+            <ul>
+              <li>You may need to drag the screen to center the texture</li>
+            </ul>
+          </li>
+        </ul>
+        <p style={{ color: "green" }}>
+          If you have access, try it with a virtual reality machine.
         </p>
       </div>
       <div style={{ padding: "20px" }}>

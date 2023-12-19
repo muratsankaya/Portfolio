@@ -8,15 +8,14 @@
   width: 100%;
 }
 
+.text-content h3,
+.text-content h4,
+.text-content li,
+.text-content ul,
 .text-content p {
   text-align: left;
-  margin: 15px;
   line-height: 1.4;
-  font-size: large;
+  font-size: medium;
   font-family: roboto;
-}
-
-.text-content h3 {
-  text-align: left;
   margin: 15px 20px;
 }

@@ -22,11 +22,16 @@
 
     <!-- custom CSS -->
     <style type="text/css">
-      /* December 2023 */
+      /* Everything below -> December 2023 */
       html,
       body {
         background: transparent;
         overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .audio-files {
@@ -110,10 +115,6 @@
         transition-duration: 0.1s;
       }
 
-      .control-btn:disabled {
-        display: none;
-      }
-
       #loader {
         width: 40px;
         height: 40px;
@@ -125,6 +126,9 @@
         top: 50%;
         right: 50%;
         transform: translate(50%, -50%);
+      }
+      .hidden {
+        display: none;
       }
     </style>
     <script>
@@ -260,26 +264,23 @@
       <div id="controls">
         <button
           type="button"
-          class="btn btn-primary control-btn"
+          class="btn btn-primary control-btn hidden"
           onclick="myPause()"
-          disabled
         >
           <i class="bi bi-pause"></i>
         </button>
         <button
           type="button"
-          class="btn btn-primary control-btn"
+          class="btn btn-primary control-btn hidden"
           onclick="resume()"
-          disabled
         >
           <i class="bi bi-play"></i>
         </button>
         <button
-          id="ply_agn_btn"
+          id="ply-agn-btn"
           type="button"
-          class="btn btn-success"
+          class="btn btn-success hidden"
           onclick="window.location.reload(true);"
-          style="display: none"
         >
           Play Again
         </button>
