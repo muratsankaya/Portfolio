@@ -13,7 +13,7 @@ const Header = () => {
         <Button
           variant="outline-dark"
           onClick={() =>
-            window.open("https://chromewebstore.google.com/?hl=en", "_blank")
+            window.open("https://github.com/muratsankaya/Portfolio", "_blank")
           }
         >
           View This Project

@@ -33,7 +33,6 @@ const background = (p, parentDimensions) => {
   let circles = [];
 
   p.setup = () => {
-    p.frameRate(10);
     p.createCanvas(parentDimensions.width, parentDimensions.height);
     for (let i = 0; i < 80; ++i) {
       let xSpeed = p.random(-1.6, 1.6);
