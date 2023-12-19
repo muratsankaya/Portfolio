@@ -4,6 +4,7 @@ import background from "../Utilities/background";
 import CanvasDisplay from "./CanvasDisplay";
 import Introduction from "./InteractiveProjects/Introduction";
 import Project from "./Project";
+import Header from "./Header";
 
 const App = () => {
   const interactiveProjects = [
@@ -18,6 +19,7 @@ const App = () => {
       <div className="background">
         <P5Wrapper sketch={background} />
       </div>
+      <Header />
       <div className="interactive-projects">
         <Introduction />
         {interactiveProjects.map((project) => (
